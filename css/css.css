@@ -1,0 +1,302 @@
+
+@font-face{
+
+}
+
+body{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+.conteneur{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header{
+    background: rgb(211, 22, 79);
+    display: flex;
+    justify-content : space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0% 1%;
+    position: fixed;
+    z-index: 999;
+}
+
+.inline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.inlineCenter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.colum{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sec1{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/hero-background.jpg');
+    background-repeat: round;
+    display: flex;
+    justify-content: center;
+}
+
+.sec2{
+    width: 100%;
+    height: 80vh;
+    background: rgb(241, 240, 243);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.sec3{
+    width: 100%;
+    height: 60vh;
+    background: rgb(211, 22, 79);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.sec4{
+    width: 100%;
+    height: 60vh;
+    background: rgb(241, 240, 243);
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.sec5{
+    width: 100%;
+    height: 80vh;
+    background: rgb(211, 22, 79);
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.sec6{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.sec7{
+    width: 100%;
+    height: 60vh;
+    background: rgb(167, 57, 90);
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.sec8{
+    width: 100%;
+    height: 80vh;
+    background: rgb(241, 240, 243);
+
+}
+
+.sec9{
+    width: 100%;
+    height: 30vh;
+    background:black;
+
+}
+
+.sec10{
+    width: 100%;
+    height: 100vh;
+    background: white;
+
+}
+
+.sec11{
+    width: 100%;
+    height: 100vh;
+    background: rgb( 30, 25, 37);
+
+}
+
+.sec12{
+    width: 100%;
+    height: 70vh;
+    background: rgb(45, 45, 45);
+
+}
+
+
+/*
+    Les conteurs des enfants
+*/
+
+.inSec1{
+    text-align: center;
+    width:60vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inSec2{
+    width: 100vw;
+    height: 80h;
+}
+
+.inSec3{
+    width: 70vw;
+    height: 50vh;
+}
+.inSec4{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.inSec5{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.inSec6{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.element40{
+    width: 50vw;
+    height: 60vh;
+}
+
+.font-large{
+    font-size: large;
+}
+
+.font-larger{
+    font-size: larger;
+}
+
+.font-medium{
+    font-size: medium;
+}
+
+font-small{
+    font-size: small;
+}
+
+font-smaller{
+    font-size: smaller;
+}
+
+
+
+
+/*
+    La partie enfant
+*/
+
+img.logoUp{
+    width: 5%;
+    height: 8vh;
+}
+
+.nav{
+    font-size: smaller;
+}
+
+.navA{
+    margin: 0 15px;
+    color: white;
+}
+
+.small-icon{
+    width: 3vw;
+    height: 5.5vh;
+}
+.small-icon2{
+    width: 5vw;
+    height: 8vh;
+}
+
+button{
+    width: 15vw;
+    height: 7vh;
+    border: 1px white solid;
+    border-radius: 2vh;
+    margin: 0 10px;
+}
+
+.btn-rouge{
+    background: rgb(211, 22, 79);
+}
+
+.btn-blanc{
+    background: rgb(255, 255, 255);
+}
+
+button:hover{
+    background: none;
+}
+
+.opacite{
+    opacity: 0.6;
+}
+
+.gros{
+    width: 30vw;
+    height: 55vh;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.petit{
+    width: 20vw;
+    height: 30vh;
+    position: relative;
+    left: 15vw;
+    top: 30vh;
+    border-radius: 20px;
+}
+
+button:focus{
+    outline: none;
+}
