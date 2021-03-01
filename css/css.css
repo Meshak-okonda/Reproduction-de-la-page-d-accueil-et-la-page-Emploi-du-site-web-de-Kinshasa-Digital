@@ -1,7 +1,107 @@
+@font-face{
+    font-family: 'monserat';
+    src: url(font/Montserrat/Montserrat-Black.ttf),
+        url(font/Montserrat/Montserrat-BlackItalic.ttf),
+        url(font/Montserrat/Montserrat-Bold.ttf) format(),
+        url(font/Montserrat/Montserrat-BoldItalic.ttf),
+        url(font/Montserrat/Montserrat-ExtraBold.ttf),
+        url(font/Montserrat/Montserrat-ExtraBoldItalic.ttf),
+        url(font/Montserrat/Montserrat-ExtraLight.ttf),
+        url(font/Montserrat/Montserrat-ExtraLightItalic.ttf),
+        url(font/Montserrat/Montserrat-Italic.ttf),
+        url(font/Montserrat/Montserrat-Light.ttf),
+        url(font/Montserrat/Montserrat-LightItalic.ttf),
+        url(font/Montserrat/Montserrat-Medium.ttf),
+        url(font/Montserrat/Montserrat-MediumItalic.ttf),
+        url(font/Montserrat/Montserrat-Regular.ttf),
+        url(font/Montserrat/Montserrat-SemiBold.ttf),
+        url(font/Montserrat/Montserrat-SemiBoldItalic.ttf),
+        url(font/Montserrat/Montserrat-Thin.ttf),
+        url(font/Montserrat/Montserrat-ThinItalic.ttf);
+    
+}
 
 @font-face{
-
+    font-family: 'roboto';
+    src: url(font/Roboto/Roboto-Black.ttf),
+        url(font/Roboto/Roboto-BlackItalic.ttf),
+        url(font/Roboto/Roboto-Bold.ttf),
+        url(font/Roboto/Roboto-BoldItalic.ttf),
+        url(font/Roboto/Roboto-Italic.ttf),
+        url(font/Roboto/Roboto-Light.ttf),
+        url(font/Roboto/Roboto-LightItalic.ttf),
+        url(font/Roboto/Roboto-Medium.ttf),
+        url(font/Roboto/Roboto-MediumItalic.ttf),
+        url(font/Roboto/Roboto-Regular.ttf),
+        url(font/Roboto/Roboto-Thin.ttf),
+        url(font/Roboto/Roboto-ThinItalic.ttf),
 }
+
+@font-face{
+    font-family: 'ubuntu';
+    src:url(font/Ubuntu_Mono/UbuntuMono-Bold.ttf),
+        url(font/Ubuntu_Mono/UbuntuMono-BoldItalic.ttf),
+        url(font/Ubuntu_Mono/UbuntuMono-Italic.ttf),
+        url(font/Ubuntu_Mono/UbuntuMono-Regular.ttf);
+}
+
+@keyframes defile{
+    0%{
+
+    }
+    10%{
+
+    }
+    20%{
+
+    }
+    50%{
+        
+    }
+    60%{
+
+    }
+    70%{
+
+    }
+
+    100%{
+
+    }
+}
+
+.ubuntu{
+    font-family: 'ubuntu', Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+.ubuntu-bold{
+    font-family: 'ubuntu', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+
+.roboto{
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+.roboto-bold{
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.monserat{
+    font-family: 'monserat', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+.monserat-bold{
+    font-family: 'monserat', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+/*
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+*/
 
 body{
     width: 100%;
@@ -9,6 +109,7 @@ body{
     margin: 0;
     padding: 0;
     background: white;
+    font-family: 'roboto', sans-serif;
 }
 
 .conteneur{
@@ -17,10 +118,14 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
+    font-family: 'monserat', sans-serif;
+    
+    /*
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu Mono', monospace;*/
 }
 
-.header{
-    background: rgb(211, 22, 79);
+.nav{
     display: flex;
     justify-content : space-between;
     flex-direction: row;
@@ -28,211 +133,133 @@ body{
     padding: 0% 1%;
     position: fixed;
     z-index: 999;
+    font-family: 'roboto', sans-serif;
+    font-weight: bold;
+}
+
+
+
+.back-color-red{
+    background: rgb(211, 22, 79);
+}
+
+.back-color-red-white{
+    background: rgb(132, 15, 64);
+}
+
+.back-color-gris{
+    background: rgb(241, 240, 243);
+}
+
+.back-color-black{
+    background: rgb(0, 0, 0);
+}
+
+.back-color-black-gris{
+    background: rgb(45, 45, 45);
 }
 
 .inline{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px 0;
 }
 
-.inlineCenter{
+.inlinespace{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.inlineElementCenter{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    
+}
+
+.border{
+    border: solid 1px;
+}
+
+.ligne{
+    border: none;
+    border-top: 1px solid black;
+    width: 40px;
+    
 }
 
 .colum{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 .sec1{
-    width: 100%;
-    height: 100vh;
     background-image: url('../images/hero-background.jpg');
     background-repeat: round;
-    display: flex;
-    justify-content: center;
 }
 
-.sec2{
-    width: 100%;
-    height: 80vh;
-    background: rgb(241, 240, 243);
+.sec{
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
 }
-
-.sec3{
-    width: 100%;
-    height: 60vh;
-    background: rgb(211, 22, 79);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: space-between;
-}
-
-.sec4{
-    width: 100%;
-    height: 60vh;
-    background: rgb(241, 240, 243);
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-    align-content: space-around;
-}
-
-.sec5{
-    width: 100%;
-    height: 80vh;
-    background: rgb(211, 22, 79);
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-    align-content: space-around;
-}
-
-.sec6{
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-    align-content: space-around;
-}
-
-.sec7{
-    width: 100%;
-    height: 60vh;
-    background: rgb(167, 57, 90);
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-    align-content: space-around;
-}
-
-.sec8{
-    width: 100%;
-    height: 80vh;
-    background: rgb(241, 240, 243);
-
-}
-
-.sec9{
-    width: 100%;
-    height: 30vh;
-    background:black;
-
-}
-
-.sec10{
-    width: 100%;
-    height: 100vh;
-    background: white;
-
-}
-
-.sec11{
-    width: 100%;
-    height: 100vh;
-    background: rgb( 30, 25, 37);
-
-}
-
-.sec12{
-    width: 100%;
-    height: 70vh;
-    background: rgb(45, 45, 45);
-
-}
-
 
 /*
     Les conteurs des enfants
 */
 
-.inSec1{
-    text-align: center;
-    width:60vw;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.inSec2{
-    width: 100vw;
-    height: 80h;
-}
-
-.inSec3{
-    width: 70vw;
-    height: 50vh;
-}
-.inSec4{
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-}
-
-.inSec5{
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-}
-
-.inSec6{
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-}
-
-.element40{
-    width: 50vw;
-    height: 60vh;
-}
 
 .font-large{
-    font-size: large;
+    font-size: 50px;
 }
 
 .font-larger{
-    font-size: larger;
+    font-size: 40px;
 }
 
 .font-medium{
-    font-size: medium;
+    font-size: 30px;
 }
 
-font-small{
-    font-size: small;
+.font-small{
+    font-size: 20px;
 }
 
-font-smaller{
-    font-size: smaller;
+.font-smaller{
+    font-size: 10px;
 }
-
 
 
 
 /*
     La partie enfant
 */
+
+
+ol{
+    font-family: 'ubuntu', Arial, Helvetica, sans-serif;
+}
+
+.marge{
+    margin: 70px auto;
+}
+
+.margeMin{
+    margin: 40px auto;
+}
+
+.center{
+    text-align: center;
+}
+
+.center:hover{
+    animation: monAnimation 1s alternate;
+    
+}
 
 img.logoUp{
     width: 5%;
@@ -246,6 +273,7 @@ img.logoUp{
 .navA{
     margin: 0 15px;
     color: white;
+    font-style: normal;
 }
 
 .small-icon{
@@ -258,15 +286,20 @@ img.logoUp{
 }
 
 button{
-    width: 15vw;
-    height: 7vh;
+    height: 8vh;
+    font-size: 18px;
+    font-style: initial;
     border: 1px white solid;
     border-radius: 2vh;
     margin: 0 10px;
+    padding: 0px 20px;
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 .btn-rouge{
     background: rgb(211, 22, 79);
+    border: 1px rgb(211, 22, 79) solid;
 }
 
 .btn-blanc{
@@ -299,4 +332,22 @@ button:hover{
 
 button:focus{
     outline: none;
+}
+body:focus{
+    transition: margin-top 4s;
+}
+
+.scroll{
+    overflow-x:scroll;
+    scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
+}
+
+input{
+    width: 48%;
+    height: 30px;
+}
+select{
+    width: 48%;
+    height: 30px;
 }
