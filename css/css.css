@@ -426,7 +426,7 @@ img.logoUp{
     font-weight: bold;
 }
 
-#sec6 > div:last-child > div:nth-child(2){
+#sec6 > div:last-child > div:first-child > div:nth-child(2) > {
     width:60%; 
     border-bottom-left-radius: 20px; 
     border-bottom-right-radius: 20px;
@@ -445,6 +445,8 @@ img.logoUp{
 #sec6 > div:last-child > div:first-child > div:first-child > div:nth-child(2) > div > figure{
     width: 25%;
 }
+
+#sec6 > div:last-child > div:first-child > div:first-child > div:nth-child(2) > div > figure{}
 
 .sec6img{
     width: 5wv; height:6vh;
