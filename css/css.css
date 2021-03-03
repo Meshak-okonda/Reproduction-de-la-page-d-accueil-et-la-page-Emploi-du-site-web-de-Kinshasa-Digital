@@ -412,7 +412,8 @@ img.logoUp{
 }
 
 .sec5img{
-    width: 25vw;
+    width: 22vw;
+    border-radius: 10px;
 }
 
 p.ligne{
@@ -597,6 +598,7 @@ button{
 
 .btn-blanc{
     background: rgb(255, 255, 255);
+    color: #d92950;
 }
 
 button:hover{
