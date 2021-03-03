@@ -415,7 +415,9 @@ img.logoUp{
     width: 25vw;
 }
 
-
+p.ligne{
+    margin-bottom: 20px;
+}
 /*
     Section 6
 */
@@ -446,7 +448,6 @@ img.logoUp{
     width: 25%;
 }
 
-#sec6 > div:last-child > div:first-child > div:first-child > div:nth-child(2) > div > figure{}
 
 .sec6img{
     width: 5wv; height:6vh;
