@@ -233,7 +233,6 @@ img.logoUp{
 /*  Section 2 */
 
 #sec2 > div:first-child{
-    top: 30px;
 }
 
 #sec2 > div:nth-child(2) > div:nth-child(1) > p{
@@ -296,9 +295,9 @@ img.logoUp{
 
 .petit{
     width: 20vw;
-    height: 30vh;
+    height: 35vh;
     position: absolute;
-    top: 35vh;
+    top: 30vh;
     left: 15vw;
     border-radius: 20px;
 }
