@@ -9,10 +9,6 @@
         url(font/Montserrat/Montserrat-ExtraLight.ttf),
         url(font/Montserrat/Montserrat-ExtraLightItalic.ttf),
         url(font/Montserrat/Montserrat-Italic.ttf),
-        url(font/Montserrat/Montserrat-Light.ttf),
-        url(font/Montserrat/Montserrat-LightItalic.ttf),
-        url(font/Montserrat/Montserrat-Medium.ttf),
-        url(font/Montserrat/Montserrat-MediumItalic.ttf),
         url(font/Montserrat/Montserrat-Regular.ttf),
         url(font/Montserrat/Montserrat-SemiBold.ttf),
         url(font/Montserrat/Montserrat-SemiBoldItalic.ttf),
@@ -20,11 +16,22 @@
         url(font/Montserrat/Montserrat-ThinItalic.ttf);
     
 }
+@font-face{
+    font-family: 'monserat2';
+    url(font/Montserrat/Montserrat-Medium.ttf),
+        url(font/Montserrat/Montserrat-MediumItalic.ttf);
+    }
+
+@font-face{
+    font-family: 'monserat1';
+    src:url(font/Montserrat/Montserrat-Light.ttf),
+        url(font/Montserrat/Montserrat-LightItalic.ttf);
+}
 
 @font-face{
     font-family: 'roboto';
-    src: url(font/Roboto/Roboto-Black.ttf),
-        url(font/Roboto/Roboto-BlackItalic.ttf),
+    src:url(font/Roboto/Roboto-BlackItalic.ttf),
+    url(font/Roboto/Roboto-Black.ttf),
         url(font/Roboto/Roboto-Bold.ttf),
         url(font/Roboto/Roboto-BoldItalic.ttf),
         url(font/Roboto/Roboto-Italic.ttf),
@@ -63,26 +70,26 @@
 
 @keyframes defile{
     0%{
-        margin-right: 0%;
+        transform: translateX(0);
     }
     10%{
-        margin-right: 10%;
+        transform: translateX(30px);
     }
     20%{
-        margin-right: 30%;
+        transform: translateX(60px);
     }
     50%{
-        margin-right: 50%;
+        transform: translateX(110px);
     }
     60%{
-        margin-right: 70%;
+        transform: translateX(130px);
     }
     70%{
-        margin-right: 80%;
+        transform: translateX(160px);
     }
 
     100%{
-        margin-right: 100%;
+        transform: translateX(-200px);
     }
 }
 
@@ -93,6 +100,12 @@
     to{
         margin-bottom: 100%;
     }
+}
+
+.backToUp{
+    transition: .5s;
+    animation: BackToUp 1s;
+    animation-iteration-count: 1;
 }
 
 
@@ -134,7 +147,6 @@ body{
     margin: 0;
     padding: 0;
     background: white;
-    font-family: 'roboto', sans-serif;
 }
 
 .conteneur{
@@ -143,12 +155,18 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-family: 'monserat', sans-serif;
-    
     /*
     font-family: 'Montserrat', sans-serif;
     font-family: 'Ubuntu Mono', monospace;*/
 }
+
+/* Main  */
+main > div {
+    display: flex;
+    flex-direction: row;
+}
+
+/*   Header  */
 
 .nav{
     display: flex;
@@ -158,9 +176,26 @@ body{
     padding: 0% 1%;
     position: fixed;
     z-index: 999;
-    font-weight: bold;
-    text-decoration: none;
 }
+
+img.logoUp{
+    width: 5%;
+    height: 8vh;
+}
+
+.nav{
+    font-size: smaller;
+}
+
+.navA{
+    margin: 0 15px;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    padding: 3px;
+    font-weight: 600;
+}
+
 
 /* Section 1  */
 
@@ -169,20 +204,40 @@ body{
     background-repeat: round;
 }
 
-
-.sec1{
-    transition: .5s;
-    animation: BackToUp 5s;
-    animation-iteration-count: 1;
+#sec1 > div{
+    width: 80%;
 }
+
+#sec1 > div:first-child > div:first-child{
+    margin-top: 50px;
+}
+
+#sec1 > div:nth-child(1) > div:first-child > div:first-child{
+    margin-top: 30px;
+}
+
+#sec1 > div:first-child > div:nth-child(3) > p{
+    font-family: 'monserat1', sans-serif;
+    font-size: 16px;
+    
+}
+
+#sec1 > div:nth-child(1) > div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 
 /*  Section 2 */
 
+#sec2 > div:first-child{
+    top: 30px;
+}
 
-#sec2 > div:nth-child(1){
-    animation: BackToUp 5s;
-    animation-iteration-count: 1;
+#sec2 > div:nth-child(2) > div:nth-child(1) > p{
+    font-weight: 700;
 }
 
 #sec2 > div:nth-child(2) > div:nth-child(2) > div:nth-child(1){
@@ -250,25 +305,163 @@ body{
 
 /* Section 3  */
 
+#sec3{
+    width: 70%;
+}
+
+#sec3 > div:first-child > h2 {
+    font-size: 40px; 
+    color: white;
+    font-family: 'monserat2', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#sec3 > div:last-child{
+    overflow-x:hidden;
+    overflow-y: auto;
+}
+
+#sec3 > div:last-child > div{
+    width: 20%;
+    margin: auto 30px;
+    position: relative;
+}
+
+.sec3img{
+    width: 10vw;
+    position: relative;
+}
+
+#sec3 > div:last-child > div:last-child{
+    animation: defile 5s infinite linear;
+    
+}
 
 
+/*
+    section 4
+*/
 
+#sec4 > div:first-child > h2{
+    font-family: 'monserat2', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 40px; 
+    color: black;
+}
 
+#sec4 > div:nth-child(2) > div:first-child {
+    width:40% ;margin: 0 10px 0 10%; 
+    background:white; padding:20px;  
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px;
+    border-top: 5px yellow solid;
+}
 
+#sec4 > div:nth-child(2) > div:first-child > div:nth-child(2) > p{
+    font-family: 'monserat2', Arial, Helvetica, sans-serif;
+}
 
+#sec4 > div:nth-child(2) > div:first-child > div:nth-child(1) > p{
+    font-family: 'monserat2', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
 
+#sec4 > div:nth-child(2) > div:last-child {
+    width:40% ;margin:0 10% 0 10px; 
+    background:white; 
+    padding:20px;  
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px;
+    border-top: 5px red solid;
+}
 
-.sec{
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
+#sec4 > div:nth-child(2) > div:last-child > div:nth-child(2) > p {
+    font-family: 'monserat2', Arial, Helvetica, sans-serif;
+}
+#sec4 > div:nth-child(2) > div:last-child > div:nth-child(1) > p {
+    font-family: 'monserat2', Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 
 
+/*
+    Section 5
+*/
+
+#sec5{
+    width: 80%;
+}
+#sec5 > h2{
+    font-family: 'monserat2', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#sec5 > div{
+    width: 100%;
+    overflow-x: auto;
+}
+
+#sec5 > div > div{
+    width: 25%;
+}
+
+#sec5 > div > div:nth-child(2n){
+    margin: 0 9%;
+}
+
+.sec5img{
+    width: 25vw;
+}
+
+
+/*
+    Section 6
+*/
+
+#sec6 > div:first-child > h2{
+    font-size: 40px; 
+    font-family: 'monserat2', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#sec6 > div:last-child > div:nth-child(2){
+    width:60%; 
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px;
+}
+
+#sec6 > div:last-child > div:first-child > div:first-child{
+    padding-left: 10px;
+    background:rgb(211, 22, 79); 
+    text-align:left;
+    font-size: 25px; 
+    color :white ;
+    font-family: 'monserat2', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#sec6 > div:last-child > div:first-child > div:first-child > div:nth-child(2) > div > figure{
+    width: 25%;
+}
+
+.sec6img{
+    width: 5wv; height:6vh;
+    color: #424345;
+}
+
+
+
+
+
+
+
+
+
+
 .back-color-red{
-    background: rgb(211, 22, 79);
+    background: #d92950;
 }
 
 .back-color-red-white{
@@ -312,8 +505,9 @@ body{
 
 .ligne{
     border: none;
-    border-top: 1px solid black;
+    border-top: 2px solid black;
     width: 40px;
+    border-color: #d92950;
     
 }
 
@@ -329,29 +523,6 @@ body{
     Les conteurs des enfants
 */
 
-.font-title{
-    font-size: 70px;
-}
-
-.font-large{
-    font-size: 50px;
-}
-
-.font-larger{
-    font-size: 40px;
-}
-
-.font-medium{
-    font-size: 30px;
-}
-
-.font-small{
-    font-size: 20px;
-}
-
-.font-smaller{
-    font-size: 15px;
-}
 
 
 
@@ -370,11 +541,11 @@ ol{
 }
 
 .marge{
-    margin: 70px auto;
+    margin: 50px auto;
 }
 
 .margeMin{
-    margin: 40px auto;
+    margin: 30px auto;
 }
 
 .center{
@@ -386,25 +557,7 @@ ol{
     
 }
 
-img.logoUp{
-    width: 5%;
-    height: 8vh;
-}
 
-.nav{
-    font-size: smaller;
-}
-
-.navA{
-    margin: 0 15px;
-    color: white;
-    font-style: normal;
-    text-decoration: none;
-    padding: 3px;
-}
-.navA:hover{
-    animation: lien 3s;
-}
 
 .small-icon{
     width: 3vw;
@@ -423,13 +576,20 @@ button{
     border-radius: 2vh;
     margin: 0 10px;
     padding: 0px 20px;
-    font-family: 'roboto', Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
 .btn-rouge{
-    background: rgb(211, 22, 79);
-    border: 1px rgb(211, 22, 79) solid;
+    background: #d92950;
+    border: 1px #d92950 solid;
+}
+
+.btn-rouge:hover{
+    color :#d92950;
+}
+
+.btn-blanc:hover{
+    color: white;
 }
 
 .btn-blanc{
@@ -471,9 +631,7 @@ select{
 
 
 
-.color-white{
-    color: white;
-}
+
 
 /**
     section 1
@@ -484,7 +642,46 @@ select{
     text-align: center;
 }
 
-a:hover{
-    border-bottom: 2px solid white;
-    animation: lien 5s linear alternate infinite;
+
+/** general ***/
+
+
+.color-white{
+    color: white;
+}
+
+.color-yellow{
+    color: yellow;
+}
+
+.color-red{
+    color: #d92950;
+}
+.color-red{
+    color: black;
+}
+
+
+.font-title{
+    font-size: 70px;
+}
+
+.font-large{
+    font-size: 50px;
+}
+
+.font-larger{
+    font-size: 40px;
+}
+
+.font-medium{
+    font-size: 30px;
+}
+
+.font-small{
+    font-size: 20px;
+}
+
+.font-smaller{
+    font-size: 15px;
 }
