@@ -1,65 +1,46 @@
-@font-face{
-    font-family: 'monserat';
-    src: url(font/Montserrat/Montserrat-Black.ttf),
-        url(font/Montserrat/Montserrat-BlackItalic.ttf),
-        url(font/Montserrat/Montserrat-Bold.ttf),
-        url(font/Montserrat/Montserrat-BoldItalic.ttf),
-        url(font/Montserrat/Montserrat-ExtraBold.ttf),
-        url(font/Montserrat/Montserrat-ExtraBoldItalic.ttf),
-        url(font/Montserrat/Montserrat-ExtraLight.ttf),
-        url(font/Montserrat/Montserrat-ExtraLightItalic.ttf),
-        url(font/Montserrat/Montserrat-Italic.ttf),
-        url(font/Montserrat/Montserrat-Regular.ttf),
-        url(font/Montserrat/Montserrat-SemiBold.ttf),
-        url(font/Montserrat/Montserrat-SemiBoldItalic.ttf),
-        url(font/Montserrat/Montserrat-Thin.ttf),
-        url(font/Montserrat/Montserrat-ThinItalic.ttf);
-    
-}
-@font-face{
-    font-family: 'monserat2';
-    url(font/Montserrat/Montserrat-Medium.ttf),
-        url(font/Montserrat/Montserrat-MediumItalic.ttf);
-    }
+/**   Class pour le font   */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@400;700&family=Ubuntu+Mono:ital@1&display=swap');
 
-@font-face{
-    font-family: 'monserat1';
-    src:url(font/Montserrat/Montserrat-Light.ttf),
-        url(font/Montserrat/Montserrat-LightItalic.ttf);
+.monserat{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
-@font-face{
-    font-family: 'roboto';
-    src:url(font/Roboto/Roboto-BlackItalic.ttf),
-    url(font/Roboto/Roboto-Black.ttf),
-        url(font/Roboto/Roboto-Bold.ttf),
-        url(font/Roboto/Roboto-BoldItalic.ttf),
-        url(font/Roboto/Roboto-Italic.ttf),
-        url(font/Roboto/Roboto-Light.ttf),
-        url(font/Roboto/Roboto-LightItalic.ttf),
-        url(font/Roboto/Roboto-Medium.ttf),
-        url(font/Roboto/Roboto-MediumItalic.ttf),
-        url(font/Roboto/Roboto-Regular.ttf),
-        url(font/Roboto/Roboto-Thin.ttf),
-        url(font/Roboto/Roboto-ThinItalic.ttf),
+.monserat-bold{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
 }
 
-@font-face{
-    font-family: 'ubuntu';
-    src:url(font/Ubuntu_Mono/UbuntuMono-Bold.ttf),
-        url(font/Ubuntu_Mono/UbuntuMono-BoldItalic.ttf),
-        url(font/Ubuntu_Mono/UbuntuMono-Italic.ttf),
-        url(font/Ubuntu_Mono/UbuntuMono-Regular.ttf);
+.monserat-light{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
+
+.roboto{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.roboto-bold{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.ubuntu{
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+
+
 
 @keyframes BackToUp{
     from{
-        transform: translateY(+200px);
+        transform: translateY(200px);
         opacity: 0;
     }
 
-    60%{
-        opacity: 0.3;
+    80%{
+        opacity: 0.1;
     }
 
     to{
@@ -104,37 +85,30 @@
 
 .backToUp{
     transition: .5s;
-    animation: BackToUp 1s;
+    animation: BackToUp 800ms;
+    animation-iteration-count: 1;
+}
+.backToUp-plus{
+    transition: .5s;
+    animation: BackToUp 1.2s;
+    animation-iteration-count: 1;
+}
+
+.backToUp-plus-plus{
+    transition: .5s;
+    animation: BackToUp 1.9s;
+    animation-iteration-count: 1;
+}
+.backToUp-plus-plus-plus{
+    transition: .5s;
+    animation: BackToUp 2.5s;
     animation-iteration-count: 1;
 }
 
 
-.ubuntu{
-    font-family: 'ubuntu', Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-}
-.ubuntu-bold{
-    font-family: 'ubuntu', Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
 
-.roboto{
-    font-family: 'roboto', Arial, Helvetica, sans-serif;
-    font-weight: normal;
-}
-.roboto-bold{
-    font-family: 'roboto', Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
 
-.monserat{
-    font-family: 'monserat', Arial, Helvetica, sans-serif;
-    font-weight: normal;
-}
-.monserat-bold{
-    font-family: 'monserat', Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
+
 
 /*
     font-family: 'Montserrat', sans-serif;
@@ -164,6 +138,8 @@ body{
 main > div {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    padding: 80px 0px;
 }
 
 /*   Header  */
@@ -173,18 +149,14 @@ main > div {
     justify-content : space-between;
     flex-direction: row;
     align-items: center;
-    padding: 0% 1%;
+    padding: 2vh 2vw;
     position: fixed;
     z-index: 999;
+    font-size: small;
 }
 
 img.logoUp{
-    width: 5%;
-    height: 8vh;
-}
-
-.nav{
-    font-size: smaller;
+    width: 7%;
 }
 
 .navA{
@@ -193,13 +165,15 @@ img.logoUp{
     font-style: normal;
     text-decoration: none;
     padding: 3px;
-    font-weight: 600;
+    font-family: 'monserat-medium';
+    font-weight: 900;
 }
 
 
 /* Section 1  */
 
 #sec1{
+    margin-top: 60px;
     background-image: url('../images/hero-background.jpg');
     background-repeat: round;
 }
@@ -209,98 +183,93 @@ img.logoUp{
 }
 
 #sec1 > div:first-child > div:first-child{
-    margin-top: 50px;
+    visibility: visible; 
+    opacity: 1; 
+    font-size: 37px;
 }
 
-#sec1 > div:nth-child(1) > div:first-child > div:first-child{
+#sec1 > div:first-child > div:first-child > div:first-child{
     margin-top: 30px;
 }
 
 #sec1 > div:first-child > div:nth-child(3) > p{
-    font-family: 'monserat1', sans-serif;
-    font-size: 16px;
+    font-family: 'monserat-medium', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.5s, transform 0.6s cubic-bezier(0.5, 0, 0, 1) 0.5s;
     
 }
 
-#sec1 > div:nth-child(1) > div:last-child {
+#sec1 > div:first-child > div:last-child {
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+#sec1 > div:first-child > div:nth-child(3){
+    margin: auto;
+    width: 70%;
 }
 
 
 
 /*  Section 2 */
 
-#sec2 > div:first-child{
-}
-
 #sec2 > div:nth-child(2) > div:nth-child(1) > p{
     font-weight: 700;
 }
 
-#sec2 > div:nth-child(2) > div:nth-child(2) > div:nth-child(1){
+
+
+#sec2 > div:nth-child(2) {
+    width: 55%;
+    color: #424345;
+}
+
+#sec2 > div:nth-child(2) > div:nth-child(2) > h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#sec2 > div:nth-child(2) > div:nth-child(2) > div{
+    width:50%;
+    height: 150px;
+}
+
+#sec2 > div:nth-child(2) > div:nth-child(2) > div{
     width: 50%;
+    height: 150px;
 }
 
-#sec2 > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > img{
-    background-size: cover; 
-    width: 3vw; 
-    height: 15vh; 
-    margin:auto;
-}
-
-#sec2 > div:nth-child(2) > div:nth-child(2) > div:nth-child(2){
-    margin-left:70px; 
-    width:50%;
-}
-
-#sec2 > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > img{
+.sec2imgSmall{
     background-size: cover;
     width: 3vw; 
     height: 15vh; 
     margin:auto
 }
 
-#sec2 > div:nth-child(2) > div:nth-child(3) > div:nth-child(1){
-    width:50%
-}
 
-#sec2 > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > img{
-    background-size: cover;
-    width: 3vw; 
-    height: 15vh; 
-    margin:auto
-}
 
-#sec2 > div:nth-child(2) > div:nth-child(3) > div:nth-child(2){
-    width:50%;
-    margin-left:70px;
-}
-
-#sec2 > div:nth-child(2) > div:nth-child(3) > div:nth-child(2) > img{
-    background-size: cover;
-    width: 3vw; 
-    height: 15vh; 
-    margin:auto
-}
 
 .gros{
-    width: 30vw;
-    height: 55vh;
+    width: 40vw;
     position: relative;
     border-radius: 20px;
-    float: left;
+    left: 0;
+    margin-left: -10vw;
 }
 
 .petit{
-    width: 20vw;
-    height: 35vh;
+    width: 25vw;
     position: absolute;
-    top: 30vh;
-    left: 15vw;
+    top: 33vh;
+    left: 11vw;
     border-radius: 20px;
 }
+p.ligne{
+    margin-bottom: 20px;
+}
+
 
 /* Section 3  */
 
@@ -311,8 +280,6 @@ img.logoUp{
 #sec3 > div:first-child > h2 {
     font-size: 40px; 
     color: white;
-    font-family: 'monserat2', Arial, Helvetica, sans-serif;
-    font-weight: bold;
 }
 
 #sec3 > div:last-child{
@@ -342,8 +309,6 @@ img.logoUp{
 */
 
 #sec4 > div:first-child > h2{
-    font-family: 'monserat2', Arial, Helvetica, sans-serif;
-    font-weight: bold;
     font-size: 40px; 
     color: black;
 }
@@ -353,16 +318,11 @@ img.logoUp{
     background:white; padding:20px;  
     border-bottom-left-radius: 20px; 
     border-bottom-right-radius: 20px;
-    border-top: 5px yellow solid;
-}
-
-#sec4 > div:nth-child(2) > div:first-child > div:nth-child(2) > p{
-    font-family: 'monserat2', Arial, Helvetica, sans-serif;
+    border-top: 10px yellow solid;
 }
 
 #sec4 > div:nth-child(2) > div:first-child > div:nth-child(1) > p{
-    font-family: 'monserat2', Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    color: #d92950;
 }
 
 #sec4 > div:nth-child(2) > div:last-child {
@@ -371,15 +331,11 @@ img.logoUp{
     padding:20px;  
     border-bottom-left-radius: 20px; 
     border-bottom-right-radius: 20px;
-    border-top: 5px red solid;
+    border-top: 10px red solid;
 }
 
-#sec4 > div:nth-child(2) > div:last-child > div:nth-child(2) > p {
-    font-family: 'monserat2', Arial, Helvetica, sans-serif;
-}
 #sec4 > div:nth-child(2) > div:last-child > div:nth-child(1) > p {
-    font-family: 'monserat2', Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    color: #d92950;
 }
 
 
@@ -406,18 +362,24 @@ img.logoUp{
     width: 25%;
 }
 
-#sec5 > div > div:nth-child(2n){
-    margin: 0 9%;
-}
-
 .sec5img{
     width: 22vw;
     border-radius: 10px;
 }
 
-p.ligne{
-    margin-bottom: 20px;
+.badge{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 0px;
+    height: 20px;
+    background-color: white;
+    border-radius: 5px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
+
+
 /*
     Section 6
 */
@@ -572,13 +534,13 @@ ol{
 }
 
 button{
-    height: 8vh;
+    height: 9vh;
     font-size: 18px;
     font-style: initial;
     border: 1px white solid;
     border-radius: 2vh;
     margin: 0 10px;
-    padding: 0px 20px;
+    padding: 0px 15px;
     font-weight: bold;
 }
 
@@ -661,13 +623,10 @@ select{
 .color-red{
     color: #d92950;
 }
-.color-red{
-    color: black;
-}
 
 
 .font-title{
-    font-size: 70px;
+    font-size: 75px;
 }
 
 .font-large{
@@ -688,4 +647,8 @@ select{
 
 .font-smaller{
     font-size: 15px;
+}
+
+a{
+    text-decoration: none;
 }
