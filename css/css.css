@@ -1,5 +1,5 @@
 /**   Class pour le font   */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@400;700&family=Ubuntu+Mono:ital@1&display=swap');
+
 
 .monserat{
     font-family: 'Montserrat', sans-serif;
@@ -165,8 +165,6 @@ img.logoUp{
     font-style: normal;
     text-decoration: none;
     padding: 3px;
-    font-family: 'monserat-medium';
-    font-weight: 900;
 }
 
 
