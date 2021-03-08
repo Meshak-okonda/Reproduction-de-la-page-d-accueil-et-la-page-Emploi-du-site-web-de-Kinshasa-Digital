@@ -1,0 +1,42 @@
+
+
+.in{
+    margin-top: 60px;
+    padding: 100px 8%;
+}
+
+#jobs{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.font-title-emploi{
+    font-size: 40px;
+}
+
+.item-back{
+    background: #f1f0f3;
+    width: 28%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 20px 20px;
+    height: max-content;
+}
+
+.inline-emploi{
+    
+}
+
+.card{
+    line-height: 1.5;
+}
+
+
+h4{
+    font-size: 22px;
+    margin-bottom: 0px;
+}
