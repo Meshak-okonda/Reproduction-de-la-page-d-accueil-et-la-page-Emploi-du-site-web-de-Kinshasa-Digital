@@ -645,6 +645,10 @@ p.ligne{
     margin-left: 10%;
 }
 
+#sec9-5 > h1{
+    color: black;
+}
+
 .sec9-5-item{
     display: flex;
     flex-direction: row;
@@ -652,13 +656,12 @@ p.ligne{
     margin: 0 0;
 }
 
-.width-sec9-5:first-child{
-    transform: translateY(10px);
-}
+
 
 .width-sec9-5{
-    width: 25%;
-    margin-bottom: 30px
+    width: 22%;
+    margin-bottom: 30px;
+    margin: 30px 5px;
 }
 
 
